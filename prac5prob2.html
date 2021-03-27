@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Sum of Matrix Diagonal</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="viewProblem" class="col-sm">
+          <h3>Instructions</h3>
+          <p>Write a program that returns the elements values at the diagonal of a square matrix as well as the sum of their values.</p>
+          <p>The element values of the square matrix will be given as a series of integers followed by -1 to indicate the last value.</p>
+          <p>You can assume that the square matrix has a maximum length of 4 rows and columns.</p>
+          <h3>Example Test Case</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Input</th>
+                <th scope="col">Output</th>
+                <th scope-"col">Explanation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+3
+4
+1
+5
+6
+7
+1
+2
+3
+-1
+                </td>
+                <td>
+                  The sum of [3, 6, 3] is 12
+                </td>
+                <td>The diagonal of the matrix refers to the cell values at the intersection of the first column and row (3), the second column and row (6), the third (3), and so on.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div id="viewAssessment" class="col-sm">
+          <h3>Check Your Understanding</h3>
+          <p>Let's say you were given the following sequence of integers: 5 9 2 5 -1</p>
+          <p>What is the output of this program?</p>
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button" onclick="assessUnderstanding()">Submit</button>
+            <select class="form-select" id="inputGroupSelect" aria-label="Example select with button addon">
+              <option selected>Choose an option...</option>
+              <option value="1">The sum of [5, 2] is 7</option>
+              <option value="2">The sum of [5, 9] is 14</option>
+              <option value="3">The sum of [5, 5] is 10</option>
+            </select>
+          </div>
+          <div id="correct" class="alert alert-success d-none" role="alert">
+            That is correct, please proceed to solving the problem.
+          </div>
+          <div id="incorrect" class="alert alert-danger d-none" role="alert">
+            That is incorrect, re-read the problem description more carefuly and try again. Remember, the first row in the example is 3, 4, 1. The second row is 5, 6, 7.
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script>
+      function assessUnderstanding(){
+        var input = document.getElementById("inputGroupSelect");
+        var correct = document.getElementById("correct");
+        var incorrect = document.getElementById("incorrect");
+        var CORRECT_ANSWER = "3";
+        var inputSelectedValue = input.value;
+        if(inputSelectedValue == CORRECT_ANSWER){
+          correct.classList.remove("d-none");
+          incorrect.classList.add("d-none");
+        }else{
+          correct.classList.add("d-none");
+          incorrect.classList.remove("d-none");
+        }
+      } 
+    </script>
+   
+  </body>
+</html>
